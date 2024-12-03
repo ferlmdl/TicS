@@ -1,0 +1,30 @@
+section {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .profile-card,
+  .charts-card {
+    width: 90%; /* O ajusta según prefieras */
+    margin: 0 auto;
+  }
+  
+  .profile-card .row > div {
+    text-align: left; /* Evita que el contenido esté centrado */
+    padding: 10px;
+  }
+  
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .text-center {
+    text-align: left; /* Cambia a `left` si prefieres alinear el contenido a la izquierda */
+  }
+  button.btn-success {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  

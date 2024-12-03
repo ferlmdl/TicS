@@ -1,0 +1,58 @@
+<div class="container mt-4">
+    <!-- Barra de sugerencias que se despliega -->
+    <div class="accordion" id="sugerenciasAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Sugerencias
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#sugerenciasAccordion">
+            <div class="accordion-body">
+|                                     <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="bi bi-check-circle"></i> Tome medidas para manejar la diabetes.
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-check-circle"></i> Sepa cómo mantener el azúcar en la sangre en el nivel deseado.
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-check-circle"></i> Escoja bien los alimentos y adopte hábitos de alimentación saludable.
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-check-circle"></i> Lea las etiquetas con la información nutricional.
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-check-circle"></i> Elabore un plan de alimentación saludable.
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-check-circle"></i> Revise el tamaño de las raciones en las etiquetas que incluyen la información nutricional.
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-check-circle"></i> Sepa cómo los carbohidratos afectan el nivel de azúcar en la sangre.
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-check-circle"></i> Reduzca los azúcares agregados, las grasas saturadas y la sal.
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+  
+    <!-- Cuatro contenedores con recetas (con imágenes) -->
+    <div class="row mt-4">
+      <div class="col-md-3 mb-4" *ngFor="let receta of recetas">
+        <div class="card">
+          <img src="{{ receta.imagen }}" class="card-img-top" alt="{{ receta.nombre }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ receta.nombre }}</h5>
+            <p class="card-text">{{ receta.descripcion }}</p>
+            <a href="#" class="btn btn-primary">Ver receta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

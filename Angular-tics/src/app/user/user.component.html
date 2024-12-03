@@ -1,0 +1,59 @@
+<section class="w-100 px-3">
+  <!-- Mostrar mensaje de bienvenida si está logueado -->
+  <div *ngIf="isLoggedIn">
+    <!-- Tarjeta del perfil -->
+    <div class="profile-card p-4 shadow-sm mb-4">
+      <div class="d-flex align-items-center justify-content-between">
+        <!-- Información del usuario -->
+        <div>
+          <h2 class="card-title">{{ welcomeMessage }}, {{ username }}</h2>
+          <p class="text-muted mb-1">Tipo de diabetes: {{ userData.diabetesType }}</p>
+        </div>
+        <!-- Botón de edición -->
+        <button (click)="editProfile()" class="btn btn-warning">Editar Perfil</button>
+      </div>
+      <hr>
+      <!-- Detalles adicionales -->
+      <div class="row">
+        <div class="col-sm-4">
+          <div>
+            <h5>Alimentos Consumidos</h5>
+            <p>{{ userData.foodItems }}</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div>
+            <h5>Carbohidratos Totales</h5>
+            <p>{{ userData.totalCarbs }} g</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div>
+            <h5>Insulina Recomendada</h5>
+            <p>{{ calculateInsulin() }} unidades</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Botón para agregar alimento -->
+      <div class="mt-3 text-right">
+        <button (click)="addFood()" class="btn btn-success">Agregar Alimento</button>
+      </div>
+    </div>
+
+    <!-- Sección de gráficos -->
+    <div class="charts-card p-4 shadow-sm">
+      <h4 class="mb-4">Consumo de Carbohidratos</h4>
+      <div class="navbar">
+        <button (click)="displayChart('daily')" class="btn btn-primary">Gráfico Diario</button>
+        <button (click)="displayChart('weekly')" class="btn btn-primary">Gráfico Semanal</button>
+        <button (click)="displayChart('monthly')" class="btn btn-primary">Gráfico Mensual</button>
+      </div>   
+    </div>
+  </div>
+
+  <!-- Mostrar mensaje si no está logueado -->
+  <div *ngIf="!isLoggedIn" class="mt-5 text-center">
+    <p class="h4">Inicia sesión para acceder a tu perfil.</p>
+  </div>
+</section>

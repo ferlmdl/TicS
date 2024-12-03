@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GlycoData</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles-4REKCFBZ.css"></head>
+<body><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script>
+  <app-root>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerlink="/recetas">Recetas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerlink="/user">Perfil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerlink="/recetas">Recetas</a>
+            </li>
+            <li class="nav-item" *ngif="!isLoggedIn">
+              <a class="nav-link" routerlink="/login">Iniciar sesión</a>
+            </li>
+            <li class="nav-item" *ngif="isLoggedIn">
+              <a class="nav-link" (click)="logout()">Cerrar sesión</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </app-root>
+<link rel="modulepreload" href="chunk-7T3HUMD2.js"><link rel="modulepreload" href="chunk-7Z7BO5PN.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="scripts-EEEIPNC3.js" defer=""></script><script src="main-FHST6YRJ.js" type="module"></script></body> 
+</html>

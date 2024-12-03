@@ -1,0 +1,32 @@
+<p>specific-food works!</p>
+<div class="container mt-4">
+    <div class="card">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img [src]="alimento.imagen" class="img-fluid rounded-start" [alt]="alimento.nombre">
+        </div>
+
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ alimento.nombre }}</h5>
+            <p class="card-text">{{ alimento.descripcion }}</p>
+
+            <div class="mb-3">
+              <h6>Carbohidratos:</h6>
+              <p>{{ alimento.carbohidratos }} g</p>
+            </div>
+  
+            <div class="mb-3">
+              <h6>Unidades de Insulina:</h6>
+              <p>{{ calcularInsulina(alimento.carbohidratos) }} unidades</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" (click)="volver()">Volver</button>
+    </div>
+  </div>
+  

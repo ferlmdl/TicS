@@ -1,0 +1,19 @@
+<div class="container mt-4">
+    <!-- Lista de alimentos -->
+    <div class="row">
+      <div class="col-md-3 mb-4" *ngFor="let alimento of alimentos">
+        <div class="card" (click)="verDetalle(alimento.id)">
+          <img [src]="alimento.imagen" class="card-img-top" [alt]="alimento.nombre">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ alimento.nombre }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Botón para agregar un alimento -->
+    <div class="text-center mt-4">
+      <button class="btn btn-success" (click)="agregarAlimento()">Agregar Alimento</button>
+    </div>
+  </div>
+  
